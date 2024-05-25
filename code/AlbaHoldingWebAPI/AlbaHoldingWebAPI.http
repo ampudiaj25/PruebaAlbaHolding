@@ -1,0 +1,6 @@
+@AlbaHoldingWebAPI_HostAddress = http://localhost:5211
+
+GET {{AlbaHoldingWebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

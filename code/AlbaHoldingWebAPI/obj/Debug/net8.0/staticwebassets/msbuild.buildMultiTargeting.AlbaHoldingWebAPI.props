@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AlbaHoldingWebAPI.props" />
+</Project>
