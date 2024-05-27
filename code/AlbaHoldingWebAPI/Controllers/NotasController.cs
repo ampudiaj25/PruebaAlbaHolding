@@ -44,7 +44,7 @@ namespace AlbaHoldingWebAPI.Controllers
         // PUT: api/Notas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut]
-        public async Task<IActionResult> PutCiudadano(Nota nota)
+        public async Task<IActionResult> PutNota(Nota nota)
         {
             bool result = await _context.Notas.AnyAsync(e => e.IdNotas == nota.IdNotas);
             if (!result)
@@ -70,7 +70,7 @@ namespace AlbaHoldingWebAPI.Controllers
                 await _context.SaveChangesAsync();
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception e)
             {
                throw;
              }

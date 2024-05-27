@@ -45,7 +45,7 @@ namespace AlbaHoldingWebAPI.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
 
         [HttpPut]
-        public async Task<IActionResult> PutCiudadano(Alumno alumno)
+        public async Task<IActionResult> PutAlumno(Alumno alumno)
         {
             bool result = await _context.Alumnos.AnyAsync(e => e.IdAlumno == alumno.IdAlumno);
             if (!result)

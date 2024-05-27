@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace AlbaHoldingWebAPI.Models;
 
@@ -16,8 +17,12 @@ public partial class Nota
     public int Convocatoria { get; set; }
 
     public int IdAlumno { get; set; }
+   
+    
+    [JsonIgnore]
+    public virtual Alumno? IdAlumnoNavigation { get; set; }
 
-    public virtual Alumno IdAlumnoNavigation { get; set; } = null!;
-
-    public virtual Asignatura IdAsignaturaNavigation { get; set; } = null!;
+    [JsonIgnore]
+    public virtual Asignatura? IdAsignaturaNavigation { get; set; }
+   
 }
